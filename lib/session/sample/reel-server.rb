@@ -209,7 +209,7 @@ class MyServer < Reel::Server
 		now = Time.now
 		
 		#insert into mongo now before any errors that might come
-		$mongodb_session[:commands].insert(user: user, terminal_no: terminal_no, command: (command.nil? ? "/#{type}" : CGI::unescape(command)), type: 'input', time: "#{now}")
+		# $mongodb_session[:commands].insert(user: user, terminal_no: terminal_no, command: (command.nil? ? "/#{type}" : CGI::unescape(command)), type: 'input', time: "#{now}")
 		
 		if type == "execute"
 			command = CGI::unescape(command) if command

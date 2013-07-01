@@ -8,7 +8,7 @@ class TerminalsController < ApplicationController
   end
 
   def get
-	  http = Curl.get("http://localhost:3001/1/get")
+	  http = Curl.get("http://localhost:3001/#{params[:terminal_id]}/get")
 	  render :json => http.body_str
   end
 
