@@ -1,0 +1,111 @@
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 2.881 ms    | 2.881 ms    | 2.881 ms     | 2.881 ms    | 1           |
+| #block_for_output_to_come | 5000.973 ms | 5000.973 ms | 5000.973 ms  | 5000.973 ms | 1           |
+| #sanitize_ansi_data       | 0.033 ms    | 0.033 ms    | 0.033 ms     | 0.033 ms    | 1           |
+| #respond                  | 5001.475 ms | 5001.475 ms | 5001.475 ms  | 5001.475 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 2.864 ms    | 2.864 ms    | 2.864 ms     | 2.864 ms    | 1           |
+| #execute                  | 0.289 ms    | 0.289 ms    | 0.289 ms     | 0.289 ms    | 1           |
+| #block_for_output_to_come | 5000.775 ms | 5000.775 ms | 5000.775 ms  | 5000.775 ms | 1           |
+| #sanitize_ansi_data       | 0.036 ms    | 0.036 ms    | 0.036 ms     | 0.036 ms    | 1           |
+| #respond                  | 5001.214 ms | 5001.214 ms | 5001.214 ms  | 5001.214 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 3.201 ms    | 3.201 ms    | 3.201 ms     | 3.201 ms    | 1           |
+| #execute                  | 0.231 ms    | 0.231 ms    | 0.231 ms     | 0.231 ms    | 1           |
+| #block_for_output_to_come | 5000.912 ms | 5000.912 ms | 5000.912 ms  | 5000.912 ms | 1           |
+| #sanitize_ansi_data       | 0.036 ms    | 0.036 ms    | 0.036 ms     | 0.036 ms    | 1           |
+| #respond                  | 5001.485 ms | 5001.485 ms | 5001.485 ms  | 5001.485 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /vikas/0/execute/----------start_time: 2013-05-20 01:14:41 +0530------------end_time: 2013-05-20 01:14:46 +0530------------total_time_required: 5.011157948
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 3.435 ms    | 3.435 ms    | 3.435 ms     | 3.435 ms    | 1           |
+| #execute                  | 0.295 ms    | 0.295 ms    | 0.295 ms     | 0.295 ms    | 1           |
+| #block_for_output_to_come | 5000.819 ms | 5000.819 ms | 5000.819 ms  | 5000.819 ms | 1           |
+| #sanitize_ansi_data       | 0.032 ms    | 0.032 ms    | 0.032 ms     | 0.032 ms    | 1           |
+| #respond                  | 5001.195 ms | 5001.195 ms | 5001.195 ms  | 5001.195 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /vikas/0/execute/----------start_time: 2013-05-20 01:16:24 +0530------------end_time: 2013-05-20 01:16:29 +0530------------total_time_required: 5.01369907
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 2.873 ms    | 2.873 ms    | 2.873 ms     | 2.873 ms    | 1           |
+| #execute                  | 0.427 ms    | 0.427 ms    | 0.427 ms     | 0.427 ms    | 1           |
+| #block_for_output_to_come | 5000.851 ms | 5000.851 ms | 5000.851 ms  | 5000.851 ms | 1           |
+| #sanitize_ansi_data       | 0.033 ms    | 0.033 ms    | 0.033 ms     | 0.033 ms    | 1           |
+| #respond                  | 5001.330 ms | 5001.330 ms | 5001.330 ms  | 5001.330 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /vikas/0/execute/----------start_time: 2013-05-20 01:18:58 +0530------------end_time: 2013-05-20 01:19:03 +0530------------total_time_required: 5.011273761
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 4.085 ms    | 4.085 ms    | 4.085 ms     | 4.085 ms    | 1           |
+| #block_for_output_to_come | 5000.923 ms | 5000.923 ms | 5000.923 ms  | 5000.923 ms | 1           |
+| #sanitize_ansi_data       | 0.045 ms    | 0.045 ms    | 0.045 ms     | 0.045 ms    | 1           |
+| #respond                  | 5001.412 ms | 5001.412 ms | 5001.412 ms  | 5001.412 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /----------start_time: 2013-05-20 01:28:50 +0530------------end_time: 2013-05-20 01:28:55 +0530------------total_time_required: 5.054316657
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 2.576 ms    | 2.576 ms    | 2.576 ms     | 2.576 ms    | 1           |
+| #execute                  | 0.480 ms    | 0.480 ms    | 0.480 ms     | 0.480 ms    | 1           |
+| #block_for_output_to_come | 5000.766 ms | 5000.766 ms | 5000.766 ms  | 5000.766 ms | 1           |
+| #sanitize_ansi_data       | 0.047 ms    | 0.047 ms    | 0.047 ms     | 0.047 ms    | 1           |
+| #respond                  | 5001.383 ms | 5001.383 ms | 5001.383 ms  | 5001.383 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /vikas/0/execute/----------start_time: 2013-05-20 01:32:55 +0530------------end_time: 2013-05-20 01:33:00 +0530------------total_time_required: 5.011029131
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 5.025 ms    | 5.025 ms    | 5.025 ms     | 5.025 ms    | 1           |
+| #block_for_output_to_come | 5000.859 ms | 5000.859 ms | 5000.859 ms  | 5000.859 ms | 1           |
+| #sanitize_ansi_data       | 0.023 ms    | 0.023 ms    | 0.023 ms     | 0.023 ms    | 1           |
+| #respond                  | 5001.177 ms | 5001.177 ms | 5001.177 ms  | 5001.177 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /----------start_time: 2013-05-20 01:35:41 +0530------------end_time: 2013-05-20 01:35:46 +0530------------total_time_required: 5.01069315
+MethodProfiler results for: TerminalUser
+***** 	class_tracking: TerminalUser request_url: /favicon.ico----------start_time: 2013-05-20 01:35:41 +0530------------end_time: 2013-05-20 01:35:46 +0530------------total_time_required: 5.102656836
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 2.795 ms    | 2.795 ms    | 2.795 ms     | 2.795 ms    | 1           |
+| #execute                  | 0.643 ms    | 0.643 ms    | 0.643 ms     | 0.643 ms    | 1           |
+| #block_for_output_to_come | 5000.911 ms | 5000.911 ms | 5000.911 ms  | 5000.911 ms | 1           |
+| #sanitize_ansi_data       | 0.035 ms    | 0.035 ms    | 0.035 ms     | 0.035 ms    | 1           |
+| #respond                  | 5001.371 ms | 5001.371 ms | 5001.371 ms  | 5001.371 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /vikas/0/execute/v1ka5yal1ga6----------start_time: 2013-05-20 01:41:39 +0530------------end_time: 2013-05-20 01:41:44 +0530------------total_time_required: 5.012944333
+MethodProfiler results for: TerminalUser
+***** 	class_tracking: TerminalUser request_url: /favicon.ico----------start_time: 2013-05-20 01:41:39 +0530------------end_time: 2013-05-20 01:41:44 +0530------------total_time_required: 5.129618943
+MethodProfiler results for: TerminalUser
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| Method                    | Min Time    | Max Time    | Average Time | Total Time  | Total Calls |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+| #initialize               | 3.733 ms    | 3.733 ms    | 3.733 ms     | 3.733 ms    | 1           |
+| #execute                  | 0.466 ms    | 0.466 ms    | 0.466 ms     | 0.466 ms    | 1           |
+| #block_for_output_to_come | 5000.774 ms | 5000.774 ms | 5000.774 ms  | 5000.774 ms | 1           |
+| #sanitize_ansi_data       | 0.040 ms    | 0.040 ms    | 0.040 ms     | 0.040 ms    | 1           |
+| #respond                  | 5001.246 ms | 5001.246 ms | 5001.246 ms  | 5001.246 ms | 1           |
++---------------------------+-------------+-------------+--------------+-------------+-------------+
+***** 	class_tracking: TerminalUser request_url: /vikas/0/execute/ls----------start_time: 2013-05-20 02:01:12 +0530------------end_time: 2013-05-20 02:01:17 +0530------------total_time_required: 5.050995156
+MethodProfiler results for: TerminalUser
+***** 	class_tracking: TerminalUser request_url: /favicon.ico----------start_time: 2013-05-20 02:01:12 +0530------------end_time: 2013-05-20 02:01:17 +0530------------total_time_required: 5.222690558

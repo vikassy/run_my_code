@@ -1,5 +1,15 @@
 CodeRunner::Application.routes.draw do
 
+  root :to => "terminals#index" 
+
+  get "terminals/:terminal_id/get", to: "terminals#get"   
+
+  get "terminals/:terminal_id/execute", to: "terminals#execute"
+
+  get "terminals/:terminal_id/kill", to: "terminals#kill"
+  get "terminals/:terminal_id/reset", to: "terminals#reset"
+
+
   get "static_pages/home"
 
   devise_for :users
