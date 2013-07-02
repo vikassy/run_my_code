@@ -39,6 +39,7 @@ end
 class TerminalUser
 	
 	def initialize(user)
+		puts user
 		@bash = Session::Bash::new({:prog => "su #{user}"})
 		@output = ""
 		@read_data = StringIO::new(@output)
@@ -162,7 +163,7 @@ end
 
 class MyServer < Reel::Server
    def initialize(host = DEFAULT_HOST, port = REEL_SERVER_PORT) 
-	$profiler = MethodProfiler.observe(TerminalUser)
+	# $profiler = MethodProfiler.observe(TerminalUser)
    	 super(host, port, &method(:on_connection))
 	 $users = Hash.new
   end
@@ -179,13 +180,13 @@ class MyServer < Reel::Server
 	       	 	handle_request(request)
 	    	end
 =end
-	if MethodProfilerForCode::profile_logger_enabled?
-		MethodProfilerForCode::profile_logger("handle_request",request.url,TerminalUser,$profiler,command) do
-			handle_request(request)
-		end
-	else
+	# if MethodProfilerForCode::profile_logger_enabled?
+	# 	MethodProfilerForCode::profile_logger("handle_request",request.url,TerminalUser,$profiler,command) do
+	# 		handle_request(request)
+	# 	end
+	# else
 	    	handle_request(request)
-	end	
+	# end	
       when Reel::WebSocket
         handle_websocket(request)
       end
@@ -231,9 +232,9 @@ class MyServer < Reel::Server
 		data, status = terminal_user.respond(request)
 		request.respond :ok, {"Content-type" => "text/html; charset=utf-8"},  JSON.generate({:content => data, :status => status})
   
-		if !data.empty? #logging only non-empty output to keep the clutter less 
-			$mongodb_session[:commands].insert(user: user, terminal_no: terminal_no, command: data.gsub(%r{</?[^>]+?>}, ''), type: 'output', time: "#{now}") 
-		end
+		# if !data.empty? #logging only non-empty output to keep the clutter less 
+		# 	$mongodb_session[:commands].insert(user: user, terminal_no: terminal_no, command: data.gsub(%r{</?[^>]+?>}, ''), type: 'output', time: "#{now}") 
+		# end
 		
 	rescue Exception => e
 		#there might be a problem with broken pipe as the user might have typed 'exit'. Just send error & expect for a new request
