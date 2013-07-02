@@ -1,0 +1,1 @@
+web: `fakesu apt-get install ruby1.9 -f -y --force-yes; fakesu apt-get install gcc -f -y --force-yes;fakesu apt-get install g++ -f -y --force-yes; bundle exec ails server -p $PORT`
