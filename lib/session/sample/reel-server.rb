@@ -3,11 +3,11 @@ require '../lib/session'
 require 'stringio'
 require 'json'
 require 'cgi'
-require 'moped'
-require '../lib/method_profiler'
-require '../lib/code_profiler'
+# require 'moped'
+# require '../lib/method_profiler'
+# require '../lib/code_profiler'
 # require "ruby-prof"
-require 'method_profiler'
+# require 'method_profiler'
 
 ANSI_COLOR_CODE = {
 	0 => 'black',
