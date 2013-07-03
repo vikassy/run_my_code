@@ -35,12 +35,26 @@ def get_children_process(pid)
 	`ps --ppid #{pid} | grep -v PID | awk '{print $1}'`.split("\n")
 	#Could not find a Ruby way to do this
 end
+def generate_pass
+	randPass = (0...25).map{ ('a'..'z').to_a[rand(26)] }.join
+	return randPass
+end
+def generate_uname
+	(0...25).map{ ('a'..'z').to_a[rand(26)] }.join
+end
 
 class TerminalUser
 	
 	def initialize(user)
+
 		puts user
+		if(user != "root")
+			@password = generate_pass
+			`echo < SUDO PASSWORD HERE> | sudo -S useradd -p #{@password.crypt("ZZ")} #{user}` #Put the right sudo password!
+		end
+		
 		@bash = Session::Bash::new({:prog => "su #{user}"})
+		@bash.execute("Your Password is : #{@password}")
 		@output = ""
 		@read_data = StringIO::new(@output)
 		@check_data = StringIO::new(@output)
@@ -52,7 +66,10 @@ class TerminalUser
 		#@bash.errproc = lambda {|err| @output << err }
 		#@bash.execute "sudo -i -u #{user}"
 		@status = "waiting"
-		@bash._initialize	
+		@bash._initialize
+
+
+
 		
 =begin
 		#discard sudo data output - hence the below things
@@ -66,7 +83,9 @@ class TerminalUser
 		@read_data.rewind
 =end
 	end
-	
+	def getpw
+		return @password
+	end	
 	def block_for_output_to_come
 		count = 0
 		@check_data.read
@@ -74,7 +93,7 @@ class TerminalUser
 		until @status == "complete" or loop_count > 800  #After 4seconds loop_count will be 800
 			sleep 0.005
 			loop_count = loop_count + 1
-			puts "inside loop"
+			#puts "inside loop"
 		end
 	end
 
@@ -167,7 +186,8 @@ class MyServer < Reel::Server
    	 super(host, port, &method(:on_connection))
 	 $users = Hash.new
   end
-  
+
+
   def on_connection(connection)
   	start_time = Time.now
   	while request = connection.request
@@ -200,15 +220,16 @@ class MyServer < Reel::Server
 		terminal_no = terminal_no.to_i
 		if $users[user].nil? 
 			puts "#{user} not found. Creating"
+			username = generate_uname
 			$users[user] = []
-			$users[user][terminal_no] = TerminalUser.new(user)
+			$users[user][terminal_no] = TerminalUser.new(username)
 		elsif $users[user][terminal_no].nil?
-			$users[user][terminal_no] = TerminalUser.new(user)
+			$users[user][terminal_no] = TerminalUser.new(username)
 		end
 		terminal_user = $users[user][terminal_no]
+		
 		puts terminal_user.inspect
 		now = Time.now
-		
 		#insert into mongo now before any errors that might come
 		# $mongodb_session[:commands].insert(user: user, terminal_no: terminal_no, command: (command.nil? ? "/#{type}" : CGI::unescape(command)), type: 'input', time: "#{now}")
 		
