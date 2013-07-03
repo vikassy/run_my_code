@@ -7,8 +7,12 @@ gem 'rails', '4.0.0'
 group :production do
 	gem 'pg'
 end
+
+gem 'twitter-bootstrap-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+
+gem 'curb'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

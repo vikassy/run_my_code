@@ -1,2 +1,10 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div id="editor">function foo(items) {
+     var x = "All this is syntax highlighted";
+     return x;
+ }</div>     
+ <script src="/assets/ace.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+     var editor = ace.edit("editor");
+     editor.setTheme("ace/theme/monokai");
+     editor.getSession().setMode("ace/mode/javascript");
+ </script>
