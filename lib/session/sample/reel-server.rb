@@ -319,6 +319,5 @@ end
 begin
 	 MyServer.run
 rescue SystemExit, Interrupt
-	MyServer.exit_system
-	
+	MyServer.exit_system	
 end
